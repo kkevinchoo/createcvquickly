@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 14px;
+    color: #555;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border-color: #333;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+}
+
+.profile-pic-label {
+    cursor: pointer;
+}
+
+.sidebar h1, .sidebar h2, .sidebar .contact p, .sidebar .details p {
+    margin: 0;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+.sidebar .contact, .sidebar .details {
+    margin-bottom: 20px;
+}
+
+.sidebar .contact h3, .sidebar .details h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.sidebar .contact p, .sidebar .details p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.main {
+    width: 70%;
+    padding: 20px;
+}
+
+.main section {
+    margin-bottom: 20px;
+}
+
+.main h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.main .job, .main .edu {
+    margin-bottom: 10px;
+}
+
+.main .job h4, .main .edu h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.main .job p, .main .edu p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #555;
+}
+
+.main .job ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.main .job ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chip {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.personal h1{
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.personal h2 {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    color: #888;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 40px; /* Aumentamos el padding para dar espacio a la línea */
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -5px; /* Ajusta esta distancia para alinear con los iconos */
+    top: 0;
+    bottom: 0;
+    width: 2px; /* Ancho de la línea */
+    background-color: #cecece; /* Color de la línea */
+}
+
+.timeline-one {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -30px; /* Ajusta la posición del icono según sea necesario */
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #464646; /* Color del icono */
+    border-radius: 50%; /* Hace que el icono sea redondo */
+}
+
+.contact-one {
+    display: flex;
+    margin-top: 10px;
+    align-items: center; /* Centrar verticalmente los elementos */
+}
+  
+.contact-one .svg-icon {
+    width: 20px; /* Tamaño del icono */
+    height: 20px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+  
+.contact-one span {
+    font-size: 14px; /* Tamaño de fuente del texto */
+}
+
+.svg-ubication{
+    width: 10px; /* Tamaño del icono */
+    height: 10px; /* Tamaño del icono */   
+}
+
+/* Print */
+#save-pdf {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#save-pdf:hover {
+    background-color: #45a049;
+}
+
+@media print {
+    #save-pdf {
+        display: none;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create your CV quickly</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <label for="upload-photo" class="profile-pic-label">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Foto de perfil" class="profile-pic"
+          id="profile-pic">
+      </label>
+      <input type="file" id="upload-photo" style="display: none;" accept="image/*">
+      <section class="resume">
+        <h3>Resumen</h3>
+        <p contenteditable="true">Describa brevemente su experiencia profesional, destacando sus principales habilidades y logros en su campo de especialización. Mencione áreas específicas en las que es experto y destaque su capacidad para trabajar en entornos de alta presión, entregando resultados de calidad en tiempos ajustados.</p>
+      </section>
+      <section class="contact">
+        <h3>Contacto</h3>
+        <div class="contact-one">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg-icon" width="10">
+            <path fill="none" stroke="black" stroke-width="2" d="M2,4 L22,4 L22,20 L2,20 L2,4 Z M2,4 L12,12 L22,4" />
+          </svg>
+          <span>correo@correo.com</span>
+        </div>
+        <div class="contact-one">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg-icon" width="10">
+            <path fill="none" stroke="black" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>+57 312 123 5220</span>
+        </div>
+        <div class="contact-one">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg-icon" width="10">
+            <path fill="none" stroke="black" stroke-width="2" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path fill="none" stroke="black" stroke-width="2" d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+          <span>linkedin.com/in/kevinchoo</span>
+        </div>
+      </section>
+      <section class="details">
+        <h3>Ubicación <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="svg-ubication" width="10">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="black" stroke-width="2"/>
+          <path fill="none" stroke="black" stroke-width="2" d="M2 12h20"/>
+          <path fill="none" stroke="black" stroke-width="2" d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg></h3>
+        <p contenteditable="true">Lugar, Pais</p>
+      </section>
+    </div>
+    <div class="main">
+      <section class="personal">
+        <h1 contenteditable="true">Nombre Apellido</h1>
+        <h2 contenteditable="true">Cargo / Ocupación </h2>
+      </section>
+      <section class="experience timeline-container">
+        <h3>Experiencia Laboral</h3>
+        <div class="jobs-container timeline">
+          <div class="job timeline-one">
+            <div class="timeline-icon"></div>
+            <div class="job-content" contenteditable="true">
+              <h4>Cargo que ocupó</h4>
+              <p><strong>Nombre de la empresa</strong> | 2024/01 - 2024/06</p>
+              <ul>
+                <li>Que hizo en este cargo, sea explicito #1</li>
+                <li>Que hizo en este cargo, sea explicito #2</li>
+                <li>Que hizo en este cargo, sea explicito #3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education timeline-container">
+        <h3>Educación</h3>
+        <div class="edu-container timeline">
+          <div class="edu timeline-one">
+            <div class="timeline-icon"></div>
+            <div class="edu-content" contenteditable="true">
+              <h4>Titulo obtenido</h4>
+              <p><strong>Lugar de realización/Universidad</strong> | 2024/01 - 2024/06</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills">
+        <h3>Habilidades</h3>
+        <div class="skills-container">
+          <span class="chip" contenteditable="true">Skill 1</span>
+          <span class="chip" contenteditable="true">Skill 2</span>
+          <span class="chip" contenteditable="true">Skill 3</span>
+        </div>
+      </section>
+    </div>
+  </div>
+  <button id="save-pdf" onclick="saveAsPDF()">Guardar en PDF</button>
+  <script src="main.js"></script>
+</body>
+
+</html>

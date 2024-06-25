@@ -20,6 +20,21 @@ body {
     padding: 20px;
 }
 
+.sidebar-one {
+    background-color: #333;
+    color: #cecece;
+}
+
+.sidebar-two {
+    background-color: #555;
+    color: #cecece;
+}
+
+.sidebar-three {
+    background-color: #777;
+    color: #cecece;
+}
+
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -47,7 +62,6 @@ body {
 .sidebar h2 {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #888;
 }
 
 .sidebar .contact, .sidebar .details {
@@ -57,7 +71,6 @@ body {
 .sidebar .contact h3, .sidebar .details h3 {
     font-size: 16px;
     margin-bottom: 10px;
-    color: #444;
 }
 
 .sidebar .contact p, .sidebar .details p {
@@ -187,6 +200,37 @@ body {
 .svg-ubication{
     width: 10px; /* Tamaño del icono */
     height: 10px; /* Tamaño del icono */   
+}
+
+#form {
+    justify-content: center;
+    text-align: center;
+}
+
+#form .form-part{
+    display: inline-block;
+    margin: 10px;
+}
+
+#color-one, #color-two, #color-three {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#color-one {
+    background-color: #333;
+}
+
+#color-two {
+    background-color: #555;
+}
+
+#color-three {
+    background-color: #777;
 }
 
 /* Print */
